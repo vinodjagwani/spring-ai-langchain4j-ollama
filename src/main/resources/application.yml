@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: ai-vector-search-demo
+  main:
+    allow-bean-definition-overriding: true
+
+  data:
+    mongodb:
+      uri: mongodb+srv://write2vkj86_db_user:Test1234!@cluster0.lhssb48.mongodb.net/ai_demo?appName=Cluster0
+
+langchain4j:
+  ollama:
+    chat-model:
+      base-url: http://localhost:11434
+      model-name: llama3.2
+      temperature: 0.7
+      log-requests: true
+      log-responses: true
+
+    embedding-model:
+      base-url: http://localhost:11434
+      model-name: nomic-embed-text
+
+# Vector store config (custom properties read in VectorStoreConfig)
+app:
+  vector-store:
+    collection-name: documents
+    index-name: vector_index
+    dimensions: 768
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.demo: DEBUG
+    dev.langchain4j: INFO
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: training
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration
+      - org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration

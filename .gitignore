@@ -1,0 +1,121 @@
+# ===========================
+# Java / Maven
+# ===========================
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+replay_pid*
+
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# ===========================
+# Spring Boot
+# ===========================
+application-local.yml
+application-local.properties
+application-prod.yml
+application-prod.properties
+
+# ===========================
+# Sensitive Configuration
+# ===========================
+# Never commit real credentials
+application.yml.bak
+*.env
+.env
+.env.local
+.env.production
+secrets.yml
+secrets.properties
+
+# ===========================
+# IDE — IntelliJ IDEA
+# ===========================
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# ===========================
+# IDE — Eclipse / STS
+# ===========================
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+bin/
+
+# ===========================
+# IDE — VS Code
+# ===========================
+.vscode/
+.code-workspace
+
+# ===========================
+# IDE — NetBeans
+# ===========================
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# ===========================
+# OS
+# ===========================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+
+# ===========================
+# Logs
+# ===========================
+logs/
+*.log
+*.log.*
+log/
+spring.log
+
+# ===========================
+# Node (article.js)
+# ===========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# ===========================
+# Generated Files
+# ===========================
+*.docx
+app.log
